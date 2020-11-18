@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.3.4
+#       jupytext_version: 1.7.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -86,7 +86,7 @@ warnings.filterwarnings('ignore')
 tu = TrackIO()
 
 # +
-track: Track = tu.load_track("reinvent_base")
+track: Track = tu.load_track("Austin")
 
 track.road_poly
 # -
@@ -106,7 +106,7 @@ track.road_poly
 # +
 # For the purpose of generating the notebook in a reproducible way
 # logs download has been commented out.
-logs = [('logs/deepracer-eval-sim-sample.log', 'sim-sample')]
+logs = [('logs/evaluation-20201115221644-ZbtYUD1VRIKmtOjty-Q2mA-robomaker.log', 'sim-sample')]
 
 # logs = cw.download_all_logs(
 #     'logs/deepracer-eval-', 

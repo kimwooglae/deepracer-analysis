@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.4.1
+#       jupytext_version: 1.7.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -43,7 +43,10 @@
 # Run the imports block below:
 
 # AWS DeepRacer Console
-stream_name = 'sim-sample' ## CHANGE This to your simulation application ID
+# stream_name = 'training-20201115184803-ehYPVaEJRxG-V3oc62Te_Q-robomaker' ## CHANGE This to your simulation application ID
+fname = '../aws_s3/DA2102-101-12-80-LCC-40-30-10-R52-Austin/1605598155948/logs/training/training-20201117042000-L-dlNJ6bQxitD4Nq37G0pQ-robomaker.log'  # The log will be downloaded into the specified path
+
+
 
 # + jupyter={"source_hidden": true}
 import numpy as np
@@ -81,7 +84,7 @@ for f in tu.get_tracks():
 # Take the name from results above and paste below to load the key elements of the track and view the outline of it.
 
 # + jupyter={"source_hidden": true}
-track: Track = tu.load_track("reinvent_base")
+track: Track = tu.load_track("Austin")
  
 l_track = track.center_line
 l_outer_border = track.outer_border
@@ -110,8 +113,8 @@ pu.plot_trackpoints(track)
 # + jupyter={"source_hidden": true}
 # AWS DeepRacer Console
 #stream_name = 'sim-test' ## CHANGE This to your simulation application ID
-fname = 'logs/deepracer-%s.log' %stream_name  # The log will be downloaded into the specified path
-cw.download_log(fname, stream_prefix=stream_name)  # add force=True if you downloaded the file before but want to repeat
+#fname = 'logs/%s.log' %stream_name  # The log will be downloaded into the specified path
+#cw.download_log(fname, stream_prefix=stream_name)  # add force=True if you downloaded the file before but want to repeat
 
 
 # DeepRacer for Dummies / ARCC repository - comment the above and uncomment
@@ -428,7 +431,7 @@ plot_polar_hist(df, itr)
 #
 
 ### choose episode id
-EPZ = 795
+EPZ = 15
 
 # Plot Index Map to understand graph
 plot_index_map(asl)

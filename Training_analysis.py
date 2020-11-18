@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.4.1
+#       jupytext_version: 1.7.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -116,7 +116,7 @@ tu = TrackIO()
 # Take the name from results above and paste below to load the key elements of the track and view the outline of it.
 
 # +
-track: Track = tu.load_track("reinvent_base")
+track: Track = tu.load_track("Austin")
 
 pu.plot_trackpoints(track)
 # -
@@ -140,8 +140,8 @@ pu.plot_trackpoints(track)
 
 # +
 # AWS DeepRacer Console
-stream_name = 'sim-sample' ## CHANGE This to your simulation application ID
-fname = 'logs/deepracer-%s.log' %stream_name  # The log will be downloaded into the specified path
+stream_name = 'training-20201115184803-ehYPVaEJRxG-V3oc62Te_Q-robomaker' ## CHANGE This to your simulation application ID
+fname = 'logs/%s.log' %stream_name  # The log will be downloaded into the specified path
 cw.download_log(fname, stream_prefix=stream_name)  # add force=True if you downloaded the file before but want to repeat
 
 

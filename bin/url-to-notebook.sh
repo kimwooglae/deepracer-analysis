@@ -1,6 +1,6 @@
 #!/bin/sh
 
-URL="http://127.0.0.1:8888"
+URL="http://127.0.0.1:8887"
 
 if test ! -z $1; then
     URL=$1
